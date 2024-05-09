@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -59,6 +60,32 @@ class MainActivity : AppCompatActivity() {
         })
         return true
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.opcion1 -> {
+                Toast.makeText(this, "Opcion 1 escogida", Toast.LENGTH_LONG).show()
+                true
+            }
+
+            R.id.opcion2 -> {
+                Toast.makeText(this, "Opcion 2 escogida", Toast.LENGTH_LONG).show()
+                true
+            }
+
+            R.id.opcion3 -> {
+                Toast.makeText(this, "Opcion 3 escogida", Toast.LENGTH_LONG).show()
+                true
+            }
+
+            R.id.opcion4 -> {
+                Toast.makeText(this, "Opcion 4 escogida", Toast.LENGTH_LONG).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     fun cargarRecycler(){
        miRecycler=binding.rcvalbumes
